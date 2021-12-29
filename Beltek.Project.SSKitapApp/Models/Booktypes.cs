@@ -9,7 +9,6 @@ namespace Beltek.Project.SSKitapApp.Models
         public int Id { get; set; }
         public string BookType { get; set; }
 
-        public virtual ICollection<Books> Books { get; set; }
 
     }
 }

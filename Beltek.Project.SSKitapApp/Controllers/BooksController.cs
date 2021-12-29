@@ -20,8 +20,7 @@ namespace Beltek.Project.SSKitapApp.Controllers
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            var result = _context.Books.Include(x => x.Booktypes);
-            return View(await result.ToListAsync());
+            return View(await _context.Books.ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -32,7 +31,7 @@ namespace Beltek.Project.SSKitapApp.Controllers
                 return NotFound();
             }
 
-            var books = await _context.Books.Include(x => x.Booktypes)
+            var books = await _context.Books
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (books == null)
             {
@@ -44,8 +43,7 @@ namespace Beltek.Project.SSKitapApp.Controllers
 
         // GET: Books/Create
         public IActionResult Create()
-        {
-            ViewData["TypeId"] = new SelectList(_context.Booktypes, "Id", "Booktype");
+        {           
             return View();
         }
 
@@ -54,7 +52,7 @@ namespace Beltek.Project.SSKitapApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TypeId,Writer,Name,Printing,Price")] Books books)
+        public async Task<IActionResult> Create([Bind("Id,Type,Writer,Name,Printing,Price")] Books books)
         {
             if (ModelState.IsValid)
             {
@@ -63,7 +61,6 @@ namespace Beltek.Project.SSKitapApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["TypeId"] = new SelectList(_context.Booktypes, "Id", "Booktype", books.TypeId);
             return View(books);
         }
 
@@ -81,7 +78,6 @@ namespace Beltek.Project.SSKitapApp.Controllers
                 return NotFound();
             }
 
-            ViewData["TypeId"] = new SelectList(_context.Booktypes, "Id", "Booktype", books.TypeId);
             return View(books);
         }
 
@@ -117,8 +113,6 @@ namespace Beltek.Project.SSKitapApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-
-            ViewData["TypeId"] = new SelectList(_context.Booktypes, "Id", "Booktype", books.TypeId);
             return View(books);
         }
 
@@ -130,7 +124,7 @@ namespace Beltek.Project.SSKitapApp.Controllers
                 return NotFound();
             }
 
-            var books = await _context.Books.Include(x => x.Booktypes)
+            var books = await _context.Books
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (books == null)
             {
