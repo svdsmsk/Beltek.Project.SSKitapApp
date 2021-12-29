@@ -22,8 +22,8 @@ namespace Beltek.Project.SSKitapApp.Controllers
 
         public IActionResult Index()
         {
-            //var result=_context.Books.ToList();
-            return View();
+            var result = _context.Books.ToList();
+            return View(result);
         }
 
         public IActionResult Privacy()
