@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Beltek.Project.SSKitapApp.Models.BookWriters>
+
+@{
+    ViewData["Title"] = "SSKİTAP";
+}
+
+<h1>Yazarlar</h1>
+
+<p>
+    <a asp-action="Create">Yeni Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Yazar Adı
+            </th>
+            <th>
+                Yazar Soyadı
+            </th>
+            <th>
+                Doğum Tarihi
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WriterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WriterSurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

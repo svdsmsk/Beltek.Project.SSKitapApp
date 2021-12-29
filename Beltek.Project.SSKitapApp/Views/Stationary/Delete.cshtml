@@ -1,0 +1,30 @@
+﻿@model Beltek.Project.SSKitapApp.Models.Stationary
+
+@{
+    ViewData["Title"] = "SSKİTAP";
+}
+
+<h1>Kırtasiye</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Ürün Adı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product)
+        </dd>
+        <dt class = "col-sm-2">
+            Fiyatı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Lİsteye Geri Dön</a>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+﻿@model Beltek.Project.SSKitapApp.Models.BookWriters
+
+@{
+    ViewData["Title"] = "SSKİTAP";
+}
+
+<h1>Yazarlar</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Yazar Adı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WriterName)
+        </dd>
+        <dt class = "col-sm-2">Yazar Soyadı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WriterSurname)
+        </dd>
+        <dt class = "col-sm-2">
+            Doğum Tarihi
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </form>
+</div>

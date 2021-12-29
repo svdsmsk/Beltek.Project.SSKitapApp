@@ -1,0 +1,29 @@
+﻿
+@model List<Books>
+@{
+    ViewData["Title"] = "SSKİTAP";
+}
+
+<table class="table table-success table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Kitabın Türü</th>
+            <th scope="col">Kitabın Yazarı</th>
+            <th scope="col">Kitabın Adı</th>
+            <th scope="col">Baskı Yılı</th>
+            <th scope="col">Fiyatı</th>
+        </tr>
+    </thead>
+    <tbody>
+      @*  @foreach (var item in Model)
+       {
+            <tr>
+            <td>@item.Booktypes.BookType</td>
+            <td>@item.Writer</td>
+            <td>@item.Name</td>
+            <td>@item.Printing</td>
+            <td>@item.Price</td>
+        </tr>
+       }     *@
+    </tbody>
+</table>

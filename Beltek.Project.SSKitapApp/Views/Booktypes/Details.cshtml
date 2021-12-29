@@ -1,0 +1,23 @@
+﻿@model Beltek.Project.SSKitapApp.Models.Booktypes
+
+@{
+    ViewData["Title"] = "SSKİTAP";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Kitap Türü
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookType)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Düzenle</a> |
+    <a asp-action="Index">Listeye Geri Dön</a>
+</div>

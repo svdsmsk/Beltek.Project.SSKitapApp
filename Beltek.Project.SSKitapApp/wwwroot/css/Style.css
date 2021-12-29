@@ -1,0 +1,35 @@
+﻿body {
+    margin: auto;
+    padding: 10px;
+    background-color: #ebebeb;
+    font-size: 14px;
+    font-family: Verdana;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #0f551f;
+}
+
+th {
+}
+
+a {
+    color: darkolivegreen;
+}
+
+    a:hover {
+        color: darkgreen;
+    }
+
+.button {
+    background-color: darkgreen;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+}

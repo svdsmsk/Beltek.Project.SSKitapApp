@@ -1,0 +1,47 @@
+﻿@model Beltek.Project.SSKitapApp.Models.Books
+
+@{
+    ViewData["Title"] = "SSKİTAP";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Kitabın Türü
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Booktypes.BookType)
+        </dd>
+        <dt class = "col-sm-2">
+            Yazar Adı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Writer)
+        </dd>
+        <dt class = "col-sm-2">
+            Kitabın Adı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            Baskı Yılı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Printing)
+        </dd>
+        <dt class = "col-sm-2">
+            Fiyatı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Düzenle</a> |
+    <a asp-action="Index">Listeye Geri Dön</a>
+</div>
