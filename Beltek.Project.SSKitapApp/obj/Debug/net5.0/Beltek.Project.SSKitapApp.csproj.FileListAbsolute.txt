@@ -400,7 +400,6 @@ S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\bin\Debug\
 S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\obj\Debug\net5.0\Beltek.Project.SSKitapApp.csproj.AssemblyReference.cache
 S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\obj\Debug\net5.0\Beltek.Project.SSKitapApp.GeneratedMSBuildEditorConfig.editorconfig
 S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\obj\Debug\net5.0\Beltek.Project.SSKitapApp.AssemblyInfoInputs.cache
 S:\Kurslar\Beltek\Beltek.Project.SSKitapApp\Beltek.Project.SSKitapApp\obj\Debug\net5.0\Beltek.Project.SSKitapApp.AssemblyInfo.cs
